@@ -3,7 +3,15 @@
 <form action="/books" method="post">
     <div>
     <label for="title">Title:</label>
-    <input type="text" id="title" name="title" placeholder="bookname" required autofocus>
+    <input type="text" id="title" name="title" placeholder="Book Name" required autofocus>
+    </div>
+    <div>
+        <label for="genre">Genre:</label>
+        <input type="text" id="genre" name="genre" placeholder="Book Genre" required autofocus>
+    </div>
+    <div>
+        <label for="publisher">Publisher:</label>
+        <input type="text" id="publisher" name="publisher" placeholder="Book Publisher" required autofocus>
     </div>
     <div>
     <label for="author">Author:</label>
@@ -16,20 +24,5 @@
 
     <button type="submit">Add Book</button>
 </form>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 {% endblock %}

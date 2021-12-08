@@ -53,6 +53,6 @@ def books(author):
     values= [author.id]
     results = run_sql(sql, values)
     for row in results:
-        book = Book(row['title'], row['author_id'], row['id'])
+        book = Book(row['title'], row['genre'], row['publisher'], row['author_id'], row['id'])
         books.append(book)
     return books 

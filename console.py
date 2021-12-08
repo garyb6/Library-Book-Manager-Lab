@@ -15,8 +15,8 @@ author_repository.save(author2)
 
 author_repository.select_all()
 
-book1 = Book("Fawlty Towers", author1)
+book1 = Book("Fawlty Towers", "Comedy", "Harper Collins", author1)
 book_repository.save(book1)
 
-book2 = Book("Get Carter", author2)
+book2 = Book("Get Carter", "Crime", "Canongate", author2)
 book_repository.save(book2)

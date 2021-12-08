@@ -9,5 +9,7 @@ CREATE TABLE authors (
 CREATE TABLE books (
     id SERIAL PRIMARY KEY,
     title VARCHAR(255),
+    genre VARCHAR(255),
+    publisher VARCHAR(255),
     author_id INT REFERENCES authors(id)
 );
