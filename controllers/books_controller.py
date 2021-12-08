@@ -30,7 +30,6 @@ def create_book():
     book_repository.save(book)
     return redirect('/books')
 
-
 # SHOW
 # GET '/books/<id>'
 @books_blueprint.route("/books/<id>", methods=['GET'])
