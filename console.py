@@ -20,3 +20,5 @@ book_repository.save(book1)
 
 book2 = Book("Get Carter", "Crime", "Canongate", author2)
 book_repository.save(book2)
+
+book_repository.select_all() 

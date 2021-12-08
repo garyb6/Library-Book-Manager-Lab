@@ -23,8 +23,6 @@ def select_all():
         books.append(book)
     return books
 
-
-
 def select(id):
     book = None
     sql = "SELECT * FROM books WHERE id=%s"
@@ -35,17 +33,14 @@ def select(id):
         book = Book(result["title"], result["genre"], result["publisher"], author, result["id"])
     return book 
 
-
 def delete_all():
     sql = "DELETE FROM books"
     run_sql(sql)
-
 
 def delete(id):
     sql = "DELETE FROM books WHERE id = %s"
     values = [id]
     run_sql(sql, values)
-
 
 def update(book):
     sql = "UPDATE books SET (title, genre, publisher, author_id) = (%s. %s) WHERE id = %s"
