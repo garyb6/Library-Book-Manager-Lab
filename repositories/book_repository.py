@@ -25,13 +25,24 @@ def select_all():
 
 def select(id):
     book = None
-    sql = "SELECT * FROM books WHERE id=%s"
+    sql = "SELECT * FROM books WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
     if result is not None:
         author = author_repository.select(result["author_id"])
         book = Book(result["title"], result["genre"], result["publisher"], author, result["id"])
     return book 
+
+# def select(id):
+#     task = None
+#     sql = "SELECT * FROM tasks WHERE id = %s"
+#     values = [id]
+#     result = run_sql(sql, values)[0]
+
+#     if result is not None:
+#         user = user_repository.select(result['user_id'])
+#         task = Task(result['description'], user, result['duration'], result['completed'], result['id'] )
+#     return task
 
 def delete_all():
     sql = "DELETE FROM books"
